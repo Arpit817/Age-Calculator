@@ -1,0 +1,101 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, white, blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container styling */
+.container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(32, 1, 1, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Title */
+h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Current Date */
+#currDate {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+input[type="date"] {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#CalcAge {
+    background-color: green;
+    color: white;
+}
+
+#CalcAge:hover {
+    background-color: green;
+}
+
+#resetBtn {
+    background-color: red;
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: red;
+}
+
+/* Age display */
+#displayAge {
+    visibility: hidden;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    background-color:rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid green;
+}
+/* Existing styles unchanged above */
+
+.dob-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: black;
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
