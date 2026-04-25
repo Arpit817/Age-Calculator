@@ -2,23 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background-animation">
+        <ul class="circles">
+                <li></li><li></li><li></li><li></li><li></li>
+                <li></li><li></li><li></li><li></li><li></li>
+        </ul>
+    </div>
 
-    <div class="container">
-        <h2>Age Calculator</h2>
-        <p id="currDate"></p>
-        <label for="DOB" class="dob-label">Enter your Date of Birth:</label>
-        <input type="date" id="DOB" />
-        <br>
+    <div class="container glass-panel">
+        <div class="header">
+            <h2><i class="fa-solid fa-calendar-days"></i> Age Calculator</h2>
+            <p id="currDate" class="subtitle"></p>
+        </div>
+        
+        <div class="input-section">
+            <label for="DOB" class="dob-label">Select your Date of Birth</label>
+            <div class="input-wrapper">
+                <input type="date" id="DOB" max="" />
+            </div>
+        </div>
 
-        <button id="CalcAge">Calculate Age</button>
-        <button id="resetBtn">Reset</button>
+        <div class="button-group">
+            <button id="CalcAge" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Calculate</button>
+            <button id="resetBtn" class="btn btn-secondary"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+        </div>
 
-        <div id="displayAge">
-            <p id="age"></p>
+        <div id="displayAge" class="result-container hidden">
+            <div class="main-result">
+                <h3>You are exactly:</h3>
+                <div class="age-cards">
+                    <div class="age-card">
+                        <span class="number" id="ageYears">0</span>
+                        <span class="label">Years</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="number" id="ageMonths">0</span>
+                        <span class="label">Months</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="number" id="ageDays">0</span>
+                        <span class="label">Days</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="extra-info">
+                <div class="info-box zodiac-box">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <span class="info-label">Zodiac Sign</span>
+                        <p id="zodiacSign" class="info-value">--</p>
+                    </div>
+                </div>
+                <div class="info-box birthday-box">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <div>
+                        <span class="info-label">Next Birthday</span>
+                        <p id="nextBirthday" class="info-value">--</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
